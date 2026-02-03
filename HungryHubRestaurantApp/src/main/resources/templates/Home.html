@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>HungryHub</title>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="" th:href="@{/css/Navigation.css}" />
+	<link rel="stylesheet" href="" th:href="@{css/Home.css}" />
+	<style>
+		body{
+			background-image: url('./Images/istockphoto-1006271368-612x612.jpg'); 
+			 background-size: cover; 
+        
+    
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Navigation -->
+    <nav th:replace="~{Navigation :: navbar()}"></nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Manage Food Smartly 🍽️</h1>
+            <p>
+                HungryHub helps you manage food orders, inventory, and customers
+                efficiently with a modern and reliable system.
+            </p>
+      
+          
+            
+        </div>
+
+  
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="feature-card">
+            <i class="fas fa-utensils"></i>
+            <h3>Food Management</h3>
+            <p>Manage food items, prices, and availability easily.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-cart-shopping"></i>
+            <h3>Order Tracking</h3>
+            <p>Track customer orders in real-time.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-users"></i>
+            <h3>Customer Handling</h3>
+            <p>Store and manage customer details securely.</p>
+        </div>
+    </section>
+	
+</body>
+
+</html>

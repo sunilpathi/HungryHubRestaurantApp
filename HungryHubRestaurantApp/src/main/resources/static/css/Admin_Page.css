@@ -1,0 +1,164 @@
+/* Body */
+body {
+    background-color: #fff8f0; /* Creamy warm background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Div */
+div {
+    background-color: #fffbea; /* Slightly off-white */
+    margin: 20px auto;
+    padding: 25px 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 8px 20px rgba(255,165,0,0.3); /* Orange glow */
+}
+
+/* Headings */
+h2, h3 {
+    color: #ff7a18; /* Orange/golden */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    table-layout: auto; /* Automatically adjust columns */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(255,165,0,0.2);
+}
+
+/* Table Headers */
+th {
+    padding: 12px;
+    background: linear-gradient(to right, #ffb347, #ffcc33); /* Warm gradient */
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Table Data */
+td {
+    padding: 12px;
+    text-align: center;
+    font-weight: 500;
+    color: #555;
+    border-bottom: 1px solid #ffd699;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Row Hover */
+tr:hover td {
+    background-color: #ffe5b4; /* Soft light orange on hover */
+    color: #333;
+}
+
+/* Buttons */
+.btns {
+    border: 2px solid #ff7a18;
+    padding: 10px 20px;
+    background-color: #fff8f0;
+    color: #ff7a18;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+}
+
+.btns:hover {
+    background-color: #ff7a18;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ffb347;
+}
+
+/* Back Button */
+.back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #ffcc66;
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 1px solid #ff7a18;
+    transition: all 0.4s ease;
+}
+
+.back:hover {
+    background-color: #ff7a18;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ffb347;
+}
+
+/* Inputs and Textareas */
+input, textarea {
+    display: block;
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ffcc66;
+    background-color: #fffbea;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff7a18;
+    box-shadow: 0 0 8px #ffb347;
+    background-color: #fff8f0;
+}
+
+/* Container Div wrapping table */
+div {
+    background-color: #fffbea; /* Slightly off-white */
+    margin: 20px auto;
+    padding: 25px 20px;
+    border-radius: 12px;
+    width: auto; /* Allow div to expand with content */
+    max-width: 95%; /* Prevent it from going off-screen */
+    box-shadow: 0 8px 20px rgba(255,165,0,0.3); /* Orange glow */
+    overflow-x: auto; /* Enable horizontal scroll if table is wider */
+}
+
+/* Table Styling */
+table {
+    width: max-content; /* Table width fits data naturally */
+    min-width: 100%; /* At least fill the container */
+    border-collapse: collapse;
+    margin: 0 auto 40px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(255,165,0,0.2);
+}
+
+
+/* Table responsiveness */
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 14px;
+    }
+
+    div {
+        padding: 15px;
+    }
+
+    .btns, .back {
+        padding: 8px 15px;
+    }
+}

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hungry Hub | Locate Us</title>
+    <link rel="icon" type="image/x-icon" href="./img/b.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/Navigation.css}" />
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #fff8f0;
+            color: #333;
+        }
+
+        /* Header */
+        h1 {
+            text-align: center;
+            color: #ff6b35;
+            margin-top: 30px;
+            font-size: 38px;
+            font-weight: 700;
+        }
+
+        small {
+            display: block;
+            text-align: center;
+            color: #d62828;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Location Map */
+        .location {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .location iframe {
+            border: 5px solid #ff6b35;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 900px;
+            height: 500px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .location iframe:hover {
+            transform: scale(1.02);
+        }
+
+        /* Contact Section */
+        .contact-us {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            padding: 50px 20px;
+            background: #fff3e6;
+        }
+
+        .contact-col {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+        }
+
+        .contact-col div {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            font-size: 28px;
+            color: #ff6b35;
+            width: 40px;
+        }
+
+        .contact-col h5 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1f1f1f;
+        }
+
+        .contact-col p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Contact Form */
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: #ff6b35;
+            box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+        }
+
+        .visit-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 25px;
+            border: none;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #ff6b35, #d62828);
+            color: #fff;
+            box-shadow: 0 6px 20px rgba(221, 40, 40, 0.4);
+        }
+
+        .visit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(221, 40, 40, 0.6);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1f1f1f;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer h4 {
+            color: #ff6b35;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            color: #f5f5f5;
+            margin-bottom: 5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-us {
+                flex-direction: column;
+                padding: 30px 15px;
+            }
+
+            .location iframe {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav th:replace="~{Navigation::navbar()}"></nav>
+
+    <center>
+        <h1>Our Location</h1>
+        <small>Internet required to view map</small>
+    </center>
+
+    <div class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.271914247331!2d77.43718741414805!3d17.513943208177098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba0e5edcbbf1b%3A0x3e36e1e84b5a3a47!2sBachupally%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1674150882329!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <section class="contact-us">
+        <div class="contact-col">
+            <div>
+                <i class="contact-icon fas fa-home"></i>
+                <span>
+                    <h5>Plot No. 88,Pathi Heights, Bachupally, Hyderabad, Telangana</h5>
+                    <p>India</p>
+                </span>
+            </div>
+
+            <div>
+                <i class="contact-icon fas fa-phone"></i>
+                <span>
+                    <h5>+91 8187080888</h5>
+                    <p>Mon-Sat, 10AM to 8PM</p>
+                </span>
+            </div>
+
+            <div>
+                <i class="contact-icon fas fa-envelope"></i>
+                <span>
+                    <h5>contact@hungryhub.com</h5>
+                    <p>Email us your query</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="contact-col">
+            <form action="" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="email" name="email" placeholder="Enter email address" required>
+                <input type="text" name="subject" placeholder="Enter subject" required>
+                <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                <button type="submit" class="visit-btn">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>“Explore our wide range of products designed to delight your taste buds.”</p>
+        <p>© 2026 Hungry Hub</p>
+    </section>
+</body>
+
+</html>

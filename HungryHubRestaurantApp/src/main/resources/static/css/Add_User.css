@@ -1,0 +1,117 @@
+@charset "ISO-8859-1";
+/* Body & Background */
+body {
+    background-image: url("https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+}
+
+/* Universal */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Link Style */
+a {
+    position: relative;
+    top: 20px;
+    border: 1px solid darkslategray;
+    padding: 10px 15px;
+    background-color: rgba(47, 79, 79, 0.8);
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: rgba(0, 128, 0, 0.9);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+/* Add User Container */
+.addUser {
+    background-color: rgba(0,0,0,0.6); /* translucent black overlay */
+    width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+}
+
+/* Headings */
+.addUser h3 {
+    text-align: center;
+    color: #ffcc00;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px #000;
+    font-size: 1.5rem;
+}
+
+/* Inputs */
+input {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    margin: 15px 0;
+    border: 1px solid #ffcc00;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #00ff00;
+    box-shadow: 0 0 8px #00ff00;
+    background-color: rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+/* Placeholder Text */
+input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .addUser {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 20px;
+    }
+}
